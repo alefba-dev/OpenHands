@@ -1,3 +1,17 @@
+# Alefba review overlay (additional rules)
+
+## Review guidelines (priority)
+- Focus on security regressions and auth.
+- Treat any hardcoded secret as P0.
+- Ensure every public route has rate limiting.
+- Prefer small, reviewable diffs.
+
+## Deployment/Infra notes
+- Do not change production DNS/TLS configs without documenting rollback.
+- Never commit secrets; use Render/CI env vars.
+---
+# Upstream repository guidance (do not remove)
+
 This repository contains the code for OpenHands, an automated AI software engineer. It has a Python backend
 (in the `openhands` directory) and React frontend (in the `frontend` directory).
 
